@@ -103,7 +103,7 @@
 		"lib/global.ts",
 		"lib/supports.ts"
 	],
-	"main": "dist/bundler.cjs",
+	"main": "../../node_modules/peerjs/dist/bundler.cjs",
 	"module": "dist/bundler.mjs",
 	"browser-minified": "dist/peerjs.min.js",
 	"browser-unminified": "dist/peerjs.js",
@@ -165,6 +165,7 @@
 		"check": "tsc --noEmit && tsc -p e2e/tsconfig.json --noEmit",
 		"watch": "parcel watch",
 		"build": "rm -rf dist && parcel build",
+		"build:submodule": "sh -c ./build_as_submodule.sh",
 		"prepublishOnly": "npm run build",
 		"test": "jest",
 		"test:watch": "jest --watch",
