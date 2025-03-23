@@ -2,6 +2,8 @@
 
 set -e
 
+rm -rf .parcel-cache
+
 bun run build
 
 rm -rf ../../node_modules/peerjs 
